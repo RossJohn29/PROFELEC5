@@ -1,10 +1,10 @@
 //index.js
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const crypto = require("crypto");
 const path = require('path');
+require("dotenv").config();
 
 const PsychiatristModel = require("./Models/Psychiatrist");
 const PatientModel = require("./Models/Patient");
@@ -3304,4 +3304,4 @@ app.post("/auth/check-otp-verified", async (req, res) => {
       details: err.message 
     });
   }
-});y
+});
