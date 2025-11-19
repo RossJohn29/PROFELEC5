@@ -13,9 +13,6 @@ const AvailabilityModel = require("./Models/Availability");
 const AnnouncementModel = require("./Models/Announcement");
 const AnnouncementReceiptModel = require("./Models/AnnouncementReceipt");
 const crypto = require("crypto");
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
