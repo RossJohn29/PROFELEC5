@@ -16,19 +16,6 @@ const crypto = require("crypto");
 const path = require('path');
 require('dotenv').config();
 
-let nodemailer;
-try {
-  nodemailer = require("nodemailer");
-} catch {
-  nodemailer = null;
-}
-let sgMail;
-try {
-  sgMail = require("@sendgrid/mail");
-} catch {
-  sgMail = null;
-}
-
 const app = express();
 app.use(express.json({ limit: "10mb" }));
 app.use(cors());
@@ -55,8 +42,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-
-
 // Database URI (prefer env on Render/Prod)
 const MONGO_URI =
   process.env.MONGODB_URI ||
@@ -65,6 +50,19 @@ mongoose
   .connect(MONGO_URI)
   .then(() => console.log("[db] Connected to MongoDB"))
   .catch((err) => console.error("[db] Error connecting to MongoDB:", err));
+
+let nodemailer;
+try {
+  nodemailer = require("nodemailer");
+} catch {
+  nodemailer = null;
+}
+let sgMail;
+try {
+  sgMail = require("@sendgrid/mail");
+} catch {
+  sgMail = null;
+}
 
 // Root route and health for Render
 app.get("/", (req, res) => {
