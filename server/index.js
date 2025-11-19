@@ -3,6 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const crypto = require("crypto");
+const path = require('path');
 
 const PsychiatristModel = require("./Models/Psychiatrist");
 const PatientModel = require("./Models/Patient");
@@ -12,14 +14,10 @@ const NotificationModel = require("./Models/Notification");
 const AvailabilityModel = require("./Models/Availability");
 const AnnouncementModel = require("./Models/Announcement");
 const AnnouncementReceiptModel = require("./Models/AnnouncementReceipt");
-const crypto = require("crypto");
-const path = require('path');
-require('dotenv').config();
 
 const app = express();
 app.use(express.json({ limit: "10mb" }));
 app.use(cors());
-const path = require("path");
 
 app.use(cors());
 app.use(express.json());
