@@ -1,0 +1,679 @@
+/* PatientProfileForm.css  */
+
+.patient-form-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #D2E0FB 0%, #8EACCD 100%);
+  padding-top: 0;
+  margin: 0;
+}
+
+/* Keep this page light even when dark mode is active */
+.theme-dark .patient-form-page {
+  background: linear-gradient(135deg, #D2E0FB 0%, #8EACCD 100%) !important;
+  color: #111827;
+}
+
+/* Remove white background from body when this page is active */
+body:has(.patient-form-page) {
+  background: linear-gradient(135deg, #D2E0FB 0%, #8EACCD 100%) !important;
+  margin: 0;
+  padding: 0;
+}
+
+.theme-dark .patient-form-page .bg-light {
+  background: transparent !important;
+}
+
+.theme-dark .patient-form-page .form-label {
+  color: #34495e !important;
+}
+
+.theme-dark .patient-form-page .form-control,
+.theme-dark .patient-form-page .form-select,
+.theme-dark .patient-form-page textarea {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: #d1d5db !important;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: transparent;
+  border-radius: 12px;
+  padding: 32px 24px;
+}
+
+/* Override Bootstrap mt-5 class */
+.patient-form-page .container.mt-5 {
+  margin-top: 20px !important;
+}
+
+h1,
+h2 {
+  color: #0f3460;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.theme-dark h1 {
+  color: #0f3460;
+}
+
+.theme-dark h2 {
+  color: #f3f3f3;
+}
+
+form {
+  width: 100%;
+}
+
+.mb-3 {
+  margin-bottom: 0 !important;
+}
+
+.bg-light {
+  background: transparent !important;
+  border: none !important;
+}
+
+.p-4.border.rounded.bg-light {
+  border: none !important;
+  padding-top: 0 !important;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Divider between h1 and form */
+.patient-form-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #8EACCD 50%, transparent 100%);
+  margin: 20px 0;
+}
+
+.form-control,
+.form-select,
+textarea {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  padding: 10px 12px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  cursor: auto;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+/* Gender select styles */
+.form-select option:checked {
+  background: #162431;
+  color: #fff;
+}
+
+/* Force button background to #2c3e50 */
+.btn-primary,
+button.btn-primary,
+.patient-form-page .btn-primary,
+form .btn-primary,
+.btn.btn-primary {
+  background: #2c3e50 !important;
+  background-color: #2c3e50 !important;
+  border: 1px solid #2c3e50 !important;
+  border-color: #2c3e50 !important;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+button.btn-primary:hover,
+button.btn-primary:focus,
+button.btn-primary:active,
+.patient-form-page .btn-primary:hover,
+.patient-form-page .btn-primary:focus,
+.patient-form-page .btn-primary:active,
+form .btn-primary:hover,
+form .btn-primary:focus,
+form .btn-primary:active,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+  background: #162431 !important;
+  background-color: #162431 !important;
+  border-color: #162431 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.btn-outline-danger {
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin-left: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-danger:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.alert {
+  margin-top: 24px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* HMO upload box */
+.hmo-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hmo-upload-box {
+  width: 160px;
+  height: 110px;
+  border: 2px dashed #b0b0b0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafbfc;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.hmo-upload-box:hover {
+  border-color: #4f8cff;
+}
+
+.hmo-plus {
+  font-size: 2.5rem;
+  color: #b0b0b0;
+  font-weight: bold;
+  user-select: none;
+}
+
+.hmo-has-image {
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #4f8cff;
+}
+
+.hmo-options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.hmo-option-btn {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.95;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hmo-option-btn:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+
+/* Dark theme counterparts */
+.theme-dark .patient-form-divider {
+  background: linear-gradient(90deg, transparent 0%, #6B8FA3 50%, transparent 100%);
+}
+
+.theme-dark .form-select option:checked {
+  background: #162431;
+  color: #fff;
+}
+
+/* Force dark theme button background */
+.theme-dark .btn-primary,
+.theme-dark button.btn-primary,
+.theme-dark .patient-form-page .btn-primary,
+.theme-dark form .btn-primary,
+.theme-dark .btn.btn-primary {
+  background: #2c3e50 !important;
+  background-color: #2c3e50 !important;
+  border-color: #2c3e50 !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .btn-primary:hover,
+.theme-dark .btn-primary:focus,
+.theme-dark .btn-primary:active,
+.theme-dark button.btn-primary:hover,
+.theme-dark button.btn-primary:focus,
+.theme-dark button.btn-primary:active,
+.theme-dark .patient-form-page .btn-primary:hover,
+.theme-dark .patient-form-page .btn-primary:focus,
+.theme-dark .patient-form-page .btn-primary:active,
+.theme-dark form .btn-primary:hover,
+.theme-dark form .btn-primary:focus,
+.theme-dark form .btn-primary:active,
+.theme-dark .btn.btn-primary:hover,
+.theme-dark .btn.btn-primary:focus,
+.theme-dark .btn.btn-primary:active {
+  background: #162431 !important;
+  background-color: #162431 !important;
+  border-color: #162431 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .hmo-upload-box {
+  background: #f8fafc;
+  border-color: #b0b0b0;
+}
+
+.theme-dark .hmo-upload-box:hover {
+  border-color: #4f8cff;
+}
+
+.theme-dark .hmo-plus {
+  color: #b0b0b0;
+}
+
+.theme-dark .hmo-has-image {
+  border-color: #4f8cff;
+}
+
+.theme-dark .hmo-option-btn {
+  background: #fff;
+  color: #222;
+}
+
+.theme-dark .hmo-option-btn:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+
+.theme-dark .alert {
+  background: #f0f9ff !important;
+  color: #111827 !important;
+  border-color: #bfdbfe !important;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 24px 16px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .patient-form-divider {
+    margin: 16px 0;
+  }
+
+  .form-control,
+  .form-select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 9px 10px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .hmo-upload-box {
+    width: 140px;
+    height: 95px;
+  }
+
+  .hmo-option-btn {
+    padding: 5px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Keep phone number inputs in one row on mobile */
+  .d-flex.gap-2 {
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+    align-items: center;
+  }
+
+  .d-flex.gap-2 .form-select {
+    width: auto !important;
+    max-width: 150px !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+    height: calc(1.5em + 0.95rem + 2px);
+    padding: 9px 28px 9px 10px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .d-flex.gap-2 .form-control {
+    width: 100%;
+    flex: 1;
+    height: calc(1.5em + 0.95rem + 2px);
+    padding: 9px 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 16px auto;
+    padding: 20px 12px;
+    max-width: 98%;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .form-control,
+  .form-select,
+  textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .hmo-upload-box {
+    width: 120px;
+    height: 86px;
+  }
+
+  .hmo-plus {
+    font-size: 2rem;
+  }
+
+  .hmo-option-btn {
+    padding: 4px 12px;
+    font-size: 0.85rem;
+  }
+
+  .alert {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  /* Keep phone number inputs in one row */
+  .d-flex.gap-2 {
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+    align-items: center;
+  }
+
+  .d-flex.gap-2 .form-select {
+    width: auto !important;
+    max-width: 150px !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+    height: calc(1.5em + 0.9rem + 2px);
+    padding: 8px 26px 8px 10px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .d-flex.gap-2 .form-control {
+    width: 100%;
+    flex: 1;
+    height: calc(1.5em + 0.9rem + 2px);
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 12px auto;
+    padding: 18px 10px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+    margin-bottom: 0px !important;
+  }
+
+  .patient-form-divider {
+    margin: 12px 0;
+    height: 1.5px;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+  }
+
+  .form-control,
+  .form-select,
+  textarea {
+    font-size: 0.85rem;
+    padding: 7px 9px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hmo-upload-box {
+    width: 110px;
+    height: 78px;
+  }
+
+  .hmo-plus {
+    font-size: 1.8rem;
+  }
+
+  .alert {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    margin-top: 16px;
+  }
+
+  /* Adjust phone number inputs for very small screens */
+  .d-flex.gap-2 {
+    align-items: center;
+  }
+
+  .d-flex.gap-2 .form-select {
+    max-width: 120px !important;
+    font-size: 0.7rem;
+    height: calc(1.5em + 0.85rem + 2px);
+    padding: 7px 24px 7px 9px;
+    line-height: 1.5;
+  }
+
+  .d-flex.gap-2 .form-control {
+    font-size: 0.8rem;
+    height: calc(1.5em + 0.85rem + 2px);
+    padding: 7px 9px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 20px 12px;
+  }
+}
+
+
+/* Age validation error styling */
+.form-control.is-invalid {
+  border-color: #dc3545 !important;
+  border-width: 2px !important;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Birthday field specific styles */
+.birthday-field {
+  position: relative;
+}
+
+.birthday-input {
+  cursor: pointer;
+  background: #ffffff;
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.birthday-input.has-value {
+  color: #6B8FA3;
+}
+
+.birthday-input.no-value {
+  color: #aaa;
+}
+
+.birthday-input.invalid {
+  border-color: #dc3545;
+}
+
+.birthday-input.valid {
+  border-color: #d1d5db;
+}
+
+/* Calendar popup styling */
+.calendar-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 8px;
+  box-shadow: 0 8px 32px rgba(142, 172, 205, 0.15);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Validation message styling */
+.validation-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* Dark theme support for validation errors */
+.theme-dark .text-danger,
+.theme-dark .validation-error {
+  color: #ff6b6b !important;
+}
+
+.theme-dark .form-control.is-invalid {
+  border-color: #ff6b6b !important;
+  background: #ffffff !important;
+}
+
+.theme-dark .calendar-popup {
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendar-popup {
+    padding: 12px;
+    margin-top: 6px;
+  }
+
+  .validation-error,
+  .text-danger {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-popup {
+    padding: 10px;
+  }
+
+  .validation-error,
+  .text-danger {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .calendar-popup {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .validation-error,
+  .text-danger {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+  }
+}

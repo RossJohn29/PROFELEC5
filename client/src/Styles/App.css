@@ -1,0 +1,84 @@
+/* Global theme toggles */
+.theme-dark {
+    background-color: #0b1221;
+    color: #e5e7eb;
+}
+
+.theme-dark .patient-sidebar {
+    background-color: #060a2f !important;
+}
+
+.theme-dark .btn.btn-secondary {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #374151;
+}
+
+.settings-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.settings-divider {
+    border: 0;
+    border-top: 1px solid #818080;
+    height: 0;
+    margin: 6px 0 16px;
+}
+
+
+/* Mobile devices */
+@media (max-width: 1024px) {
+  .settings-container {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 0 16px;
+  }
+
+  .dashboard-main {
+    padding: 16px !important;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px !important;
+  }
+
+  .btn-group {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 0 12px;
+  }
+
+  .dashboard-main {
+    padding: 12px !important;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 7px 10px !important;
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+}

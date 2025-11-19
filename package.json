@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "jspdf": "^3.0.3",
+    "mailtrap": "^4.3.0",
+    "nodemailer": "^6.10.1",
+    "react-pdf": "^10.2.0",
+    "react-router": "^7.9.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "tailwindcss": "^4.1.16"
+  }
+}

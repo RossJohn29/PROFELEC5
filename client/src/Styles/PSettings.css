@@ -1,0 +1,757 @@
+/* Patient Settings page styles (PSettings) */
+
+.psettings-dashboard {
+  min-height: 100vh;
+  color: inherit;
+}
+
+/* Patient Settings Dashboard Main */
+.psettings-dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* reduced top padding so header aligns better when sidebar is collapsed */
+  padding: 0px 20px 2rem 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+}
+
+.settings-container {
+  margin-top: 0px !important;
+}
+
+
+.dashboard.sidebar-open .psettings-dashboard-main {
+  margin-left: var(--patient-sidebar-open, 250px);
+  width: calc(100% - var(--patient-sidebar-open, 250px));
+}
+
+.dashboard-main .settings-container,
+.psettings-dashboard-main .settings-container {
+  margin-top: 72px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Collapsible header buttons inside patient settings */
+.psettings-dashboard .card.settings-collapsible > button.btn.btn-secondary {
+  background: transparent !important;
+  border: 1px solid rgba(142,172,205,0.15) !important;
+  color: inherit !important;
+}
+
+/* Dark mode: make the collapsible header buttons use the requested dark colors */
+.theme-dark.psettings-dashboard .card.settings-collapsible > button.btn.btn-secondary {
+  background: #1d2c3a !important;
+  color: #D2E0FB !important;
+  border-color: rgba(210,224,251,0.06) !important;
+}
+
+.theme-dark.psettings-dashboard .card.settings-collapsible > button.btn.btn-secondary:hover {
+  background: #24343f !important;
+  color: #D2E0FB !important;
+}
+
+/* Content panel when opened */
+.psettings-dashboard .card.settings-collapsible > div {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.theme-dark.psettings-dashboard .card.settings-collapsible > div {
+  background: #1d2c3a !important;
+  color: #D2E0FB !important;
+  border: 1px solid rgba(210,224,251,0.06) !important;
+}
+
+.theme-dark.psettings-dashboard .card.settings-collapsible > div,
+.theme-dark.psettings-dashboard .card.settings-collapsible > div * {
+  color: #D2E0FB !important;
+}
+
+/* Patient Settings page background */
+.theme-dark.psettings-dashboard {
+  background-color: #2C3E50;
+  color: #ffffff;
+}
+
+.theme-dark.psettings-dashboard {
+  min-height: 100vh;
+  display: block;
+}
+
+.theme-dark .psettings-dashboard .psettings-dashboard-main {
+  background: transparent !important;
+  min-height: calc(100vh - 60px);
+  box-sizing: border-box;
+}
+
+.theme-dark .settings-container h2 {
+  color: #D2E0FB !important;
+}
+
+
+.psettings-dashboard .settings-container > div:first-child > div > button.btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #6b7280; 
+  border-radius: 0 !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important; 
+  transition: color 0.18s ease, border-bottom-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  border-bottom: 3px solid transparent !important; 
+}
+
+.psettings-dashboard .settings-container > div:first-child > div > button.btn.btn-primary {
+  border-bottom-color: var(--psettings-accent, #0f3460) !important;
+  box-shadow: none !important; 
+  color: var(--psettings-accent, #0f3460) !important;
+  font-weight: 600 !important;
+}
+
+.psettings-dashboard .settings-container > div:first-child > div > button.btn:hover {
+  color: #0f3460; 
+  border-bottom-color: #8EACCD; 
+}
+
+/* Focus styles for accessibility */
+.psettings-dashboard .settings-container > div:first-child > div > button.btn:focus {
+  outline: none !important;
+}
+
+/* Dark theme */
+.theme-dark.psettings-dashboard .settings-container > div:first-child > div > button.btn {
+  color: #9ca3af !important; 
+  font-weight: 500 !important;
+}
+
+.theme-dark.psettings-dashboard .settings-container > div:first-child > div > button.btn:hover {
+  color: #D2E0FB !important;
+  border-bottom-color: #8EACCD !important;
+}
+
+.theme-dark.psettings-dashboard .settings-container > div:first-child > div > button.btn.btn-primary {
+  border-bottom-color: #D2E0FB !important;
+  color: #D2E0FB !important;
+  font-weight: 600 !important;
+}
+
+/* Profile Image Box - position profile picture container on the left */
+.psettings-dashboard .profile-image-box {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  column-gap: 24px !important;
+  position: relative !important;
+  height: auto !important;
+  min-height: 140px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.psettings-dashboard .profile-img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #f2f4f7;
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.1);
+  transition: border-color 0.3s ease;
+}
+
+.profile-img-wrapper:hover .profile-img {
+  border-color: #8EACCD;
+}
+
+.profile-edit-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 52, 96, 0.85);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.profile-img-wrapper:hover .profile-edit-overlay {
+  opacity: 1;
+}
+
+.edit-icon {
+  display: block;
+}
+
+.profile-name-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.profile-fullname {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f3460;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.profile-email {
+  font-size: 1.1rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 8px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.profile-image-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 0px;
+}
+
+.theme-dark .profile-fullname {
+  color: #D2E0FB;
+}
+
+.theme-dark .profile-email {
+  color: #8EACCD;
+}
+
+.theme-dark .psettings-dashboard .profile-img {
+  border-color: #2C3E50;
+  background: #2C3E50;
+}
+
+.profile-buttons {
+  display: flex;
+  flex-direction: row !important;
+  gap: 4px;
+}
+
+/* h3 headings in profile boxes */
+.psettings-dashboard .profile-box h3 {
+  color: #0f3460;
+}
+
+.theme-dark.psettings-dashboard .profile-box h3 {
+  color: #D2E0FB;
+}
+
+/* Profile Info Grid - 3 columns, 2 rows layout */
+.psettings-dashboard .profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.psettings-dashboard .info-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.psettings-dashboard .field-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.psettings-dashboard .field-value {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #f9fafb;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.psettings-dashboard .field-value input,
+.psettings-dashboard .field-value select {
+  margin: 0;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+/* Dark theme for profile info grid */
+.theme-dark.psettings-dashboard .field-label {
+  color: #9ca3af;
+}
+
+.theme-dark.psettings-dashboard .field-value {
+  background: #1e293b;
+  border-color: #334155;
+  color: #D2E0FB;
+}
+
+.theme-dark.psettings-dashboard .field-value input,
+.theme-dark.psettings-dashboard .field-value select {
+  background: #0f172a;
+  color: #D2E0FB;
+  border-color: #475569;
+}
+
+/* Contact Info Grid - 2 columns, 2 rows layout */
+.psettings-dashboard .contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.psettings-dashboard .contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Address field spans 2 columns for wider display */
+.psettings-dashboard .contact-address-field {
+  grid-column: 1 / -1;
+}
+
+.psettings-dashboard .contact-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.psettings-dashboard .contact-value {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #f9fafb;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.psettings-dashboard .contact-value input {
+  margin: 0;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+/* Dark theme for contact info grid */
+.theme-dark.psettings-dashboard .contact-label {
+  color: #9ca3af;
+}
+
+.theme-dark.psettings-dashboard .contact-value {
+  background: #1e293b;
+  border-color: #334155;
+  color: #D2E0FB;
+}
+
+.theme-dark.psettings-dashboard .contact-value input {
+  background: #0f172a;
+  color: #D2E0FB;
+  border-color: #475569;
+}
+
+/* Emergency Info Grid - 2 columns, 2 rows layout */
+.psettings-dashboard .emergency-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.psettings-dashboard .emergency-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Address field spans 2 columns for wider display */
+.psettings-dashboard .emergency-address-field {
+  grid-column: 1 / -1;
+}
+
+.psettings-dashboard .emergency-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.psettings-dashboard .emergency-value {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #f9fafb;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.psettings-dashboard .emergency-value input {
+  margin: 0;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+/* Dark theme for emergency info grid */
+.theme-dark.psettings-dashboard .emergency-label {
+  color: #9ca3af;
+}
+
+.theme-dark.psettings-dashboard .emergency-value {
+  background: #1e293b;
+  border-color: #334155;
+  color: #D2E0FB;
+}
+
+.theme-dark.psettings-dashboard .emergency-value input {
+  background: #0f172a;
+  color: #D2E0FB;
+  border-color: #475569;
+}
+
+/* HMO Info Grid - 2 columns layout */
+.psettings-dashboard .hmo-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.psettings-dashboard .hmo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.psettings-dashboard .hmo-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.psettings-dashboard .hmo-value {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #f9fafb;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.psettings-dashboard .hmo-value input {
+  margin: 0;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.psettings-dashboard .hmo-card-wrapper {
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.psettings-dashboard .hmo-img-container {
+  position: relative;
+  width: 240px;
+  height: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.psettings-dashboard .hmo-card-img {
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.psettings-dashboard .hmo-card-placeholder {
+  width: 240px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 6px;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  cursor: default;
+}
+
+.psettings-dashboard .hmo-upload-label {
+  cursor: pointer;
+  color: #0f3460;
+  font-weight: 500;
+}
+
+.psettings-dashboard .hmo-upload-label:hover {
+  color: #8EACCD;
+}
+
+.psettings-dashboard .hmo-edit-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 52, 96, 0.85);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.psettings-dashboard .hmo-img-container:hover .hmo-edit-overlay {
+  opacity: 1;
+}
+
+.psettings-dashboard .hmo-edit-icon {
+  display: block;
+}
+
+/* Dark theme for HMO info grid */
+.theme-dark.psettings-dashboard .hmo-label {
+  color: #9ca3af;
+}
+
+.theme-dark.psettings-dashboard .hmo-value {
+  background: #1e293b;
+  border-color: #334155;
+  color: #D2E0FB;
+}
+
+.theme-dark.psettings-dashboard .hmo-value input {
+  background: #0f172a;
+  color: #D2E0FB;
+  border-color: #475569;
+}
+
+.theme-dark.psettings-dashboard .hmo-card-img {
+  border-color: #334155;
+}
+
+.theme-dark.psettings-dashboard .hmo-card-placeholder {
+  background: #1e293b;
+  border-color: #475569;
+  color: #6b7280;
+}
+
+.theme-dark.psettings-dashboard .hmo-upload-label {
+  color: #D2E0FB;
+}
+
+.theme-dark.psettings-dashboard .hmo-upload-label:hover {
+  color: #8EACCD;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .psettings-dashboard .profile-image-box {
+    column-gap: 16px !important;
+    max-width: none !important;
+  }
+
+  .profile-img-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .psettings-dashboard .profile-img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .profile-fullname {
+    font-size: 1.5rem;
+  }
+
+  .profile-email {
+    font-size: 1rem;
+  }
+
+  /* Profile info grid - 2 columns on medium screens */
+  .psettings-dashboard .profile-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Contact info grid - single column on medium screens */
+  .psettings-dashboard .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .psettings-dashboard .contact-address-field {
+    grid-column: 1;
+  }
+
+  /* Emergency info grid - single column on medium screens */
+  .psettings-dashboard .emergency-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .psettings-dashboard .emergency-address-field {
+    grid-column: 1;
+  }
+
+  /* HMO info grid - single column on medium screens */
+  .psettings-dashboard .hmo-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .psettings-dashboard .profile-image-box {
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .psettings-dashboard .profile-image-box {
+    column-gap: 12px !important;
+    max-width: none !important;
+  }
+
+  .profile-img-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .psettings-dashboard .profile-img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .profile-fullname {
+    font-size: 1.35rem;
+  }
+
+  .profile-email {
+    font-size: 0.95rem;
+  }
+
+  /* Profile info grid - single column on small screens */
+  .psettings-dashboard .profile-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Contact info grid - single column on small screens */
+  .psettings-dashboard .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Emergency info grid - single column on small screens */
+  .psettings-dashboard .emergency-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* HMO info grid - single column on small screens */
+  .psettings-dashboard .hmo-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .psettings-dashboard .profile-image-box {
+    column-gap: 10px !important;
+    max-width: none !important;
+  }
+
+  .profile-img-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .psettings-dashboard .profile-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .profile-fullname {
+    font-size: 1.25rem;
+  }
+
+  .profile-email {
+    font-size: 0.9rem;
+  }
+
+  .profile-image-actions .btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}

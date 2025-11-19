@@ -1,0 +1,399 @@
+.manageapp-page {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.theme-dark .manageapp-page {
+  background: #2C3E50;
+}
+
+.manageapp-page .manageapp-dashboard-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.manageapp-page .manageapp-dashboard-main h1 {
+  color: #0f3460 !important;
+  font-size: 32px;
+  margin-bottom: 0 !important;
+}
+
+.theme-dark .manageapp-page .manageapp-dashboard-main h1 {
+  color: #D2E0FB !important;
+}
+
+.manageapp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.manageapp-page .appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Appointment item - 3 column grid layout */
+.manageapp-page .appointment-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.manageapp-page .appointment-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 16, 71, 0.1);
+  border-color: #8EACCD;
+}
+
+/* Column 1: Profile picture section */
+.manageapp-page .appt-avatar-section {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.manageapp-page .appt-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(142, 172, 205, 0.2);
+}
+
+/* Column 2: Patient info section (name and date/time) */
+.manageapp-page .appt-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 auto;
+}
+
+.manageapp-page .appt-patient-name {
+  font-weight: 600;
+  color: #0f3460;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.manageapp-page .appt-patient-email {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.manageapp-page .appt-datetime {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.manageapp-page .appt-notes {
+  font-size: 13px;
+  color: #8EACCD;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Column 3: Status and actions section */
+.manageapp-page .appt-status-actions {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.manageapp-page .appt-status {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.manageapp-page .status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.manageapp-page .status-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.manageapp-page .status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.manageapp-page .status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action buttons horizontal layout */
+.manageapp-page .appt-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.manageapp-page .btn-approve {
+  background: #10b981 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.manageapp-page .btn-approve:hover {
+  background: #059669 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Extra specificity to override global .btn styles */
+.manageapp-page .btn.btn-approve:hover:not(:disabled) {
+  background: #059669 !important;
+  border-color: #059669 !important;
+  color: white !important;
+}
+
+.manageapp-page .btn-approve:disabled {
+  background: #d1d5db !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none !important;
+}
+
+.manageapp-page .btn-complete {
+  background: #3b82f6 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.manageapp-page .btn-complete:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Extra specificity to override global .btn styles */
+.manageapp-page .btn.btn-complete:hover:not(:disabled) {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: white !important;
+}
+
+.manageapp-page .btn-complete:disabled {
+  background: #d1d5db !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none !important;
+}
+
+.manageapp-page .btn-cancel {
+  background: #ef4444 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.manageapp-page .btn-cancel:hover {
+  background: #dc2626 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Extra specificity to override global .btn styles */
+.manageapp-page .btn.btn-cancel:hover:not(:disabled) {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: white !important;
+}
+
+.manageapp-page .btn-cancel:disabled {
+  background: #d1d5db !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none !important;
+}
+
+/* Empty state and card styling */
+.manageapp-page .card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.theme-dark .manageapp-page .card {
+  background: #34495E;
+  border-color: #2C3E50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #E8F1F5;
+}
+
+/* Dark theme for appointment items */
+.theme-dark .manageapp-page .appointment-item {
+  background: #34495E;
+  border-color: #2C3E50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .manageapp-page .appointment-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  border-color: #8EACCD;
+}
+
+.theme-dark .manageapp-page .appt-avatar {
+  border-color: rgba(142, 172, 205, 0.3);
+}
+
+.theme-dark .manageapp-page .appt-patient-name {
+  color: #E8F1F5;
+}
+
+.theme-dark .manageapp-page .appt-patient-email,
+.theme-dark .manageapp-page .appt-datetime,
+.theme-dark .manageapp-page .appt-notes {
+  color: rgba(232, 241, 245, 0.8);
+}
+
+.theme-dark .manageapp-page .status-pending {
+  background: #fff;
+  color: #fbbf24;
+}
+
+.theme-dark .manageapp-page .status-approved {
+  background: #fff;
+  color: #1f7a3a;
+}
+
+.theme-dark .manageapp-page .status-completed {
+  background: #fff;
+  color: #60a5fa;
+}
+
+.theme-dark .manageapp-page .status-cancelled {
+  background: #fff;
+  color: #f87171;
+}
+
+.theme-dark .manageapp-page .btn-approve {
+  background: #10b981 !important;
+}
+
+.theme-dark .manageapp-page .btn-approve:hover {
+  background: #059669 !important;
+}
+
+.theme-dark .manageapp-page .btn-complete {
+  background: #3b82f6 !important;
+}
+
+.theme-dark .manageapp-page .btn-complete:hover {
+  background: #2563eb !important;
+}
+
+.theme-dark .manageapp-page .btn-cancel {
+  background: #ef4444 !important;
+}
+
+.theme-dark .manageapp-page .btn-cancel:hover {
+  background: #dc2626 !important;
+}
+
+/* Responsive design - Match DoctorLogs behavior */
+@media (max-width: 910px) {
+  .manageapp-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .manageapp-header h1 {
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .manageapp-header h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Stack appointment items on small screens */
+@media (max-width: 768px) {
+  .manageapp-page .appointment-item {
+    flex-wrap: wrap;
+  }
+
+  /* Keep avatar and info section together */
+  .manageapp-page .appt-avatar-section {
+    margin-right: 16px;
+  }
+
+  .manageapp-page .appt-info-section {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  /* Move status-actions to new row */
+  .manageapp-page .appt-status-actions {
+    margin-top: 10px !important;
+    margin-left: 0;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .manageapp-page .appt-actions {
+    flex-wrap: nowrap;
+  }
+
+  .manageapp-page .btn-approve,
+  .manageapp-page .btn-complete,
+  .manageapp-page .btn-cancel {
+    flex: 1;
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,489 @@
+.doctor-main {
+  padding-top: 22px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 8px !important;
+}
+
+.doctorlogs-page {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.theme-dark .doctorlogs-page {
+  background: #2C3E50;
+}
+
+.doctorlogs-page .logs-dashboard-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.doctorlogs-page .logs-dashboard-main h1 {
+  color: #0f3460 !important;
+  font-size: 32px;
+  margin-bottom: 0 !important;
+}
+
+.theme-dark .doctorlogs-page .logs-dashboard-main h1 {
+  color: #D2E0FB !important;
+}
+
+.doctorlogs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Filter buttons styling */
+.doctorlogs-page .btn-group .btn {
+  align-items: center !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  background: transparent !important;
+  color: #6b7280 !important;
+  border-radius: 0 !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+}
+
+.doctorlogs-page .btn-group .btn:hover {
+  background: transparent !important;
+  color: #0f3460 !important;
+  border-bottom-color: #8EACCD !important;
+  transform: none !important;
+}
+
+.doctorlogs-page .btn-group .btn.active {
+  background: transparent !important;
+  color: #0f3460 !important;
+  border-bottom-color: #0f3460 !important;
+  font-weight: 600 !important;
+}
+
+/* Dark theme for filter buttons */
+.theme-dark .doctorlogs-page .btn-group .btn {
+  color: #9ca3af !important;
+}
+
+.theme-dark .doctorlogs-page .btn-group .btn:hover {
+  color: #D2E0FB !important;
+  border-bottom-color: #8EACCD !important;
+}
+
+.theme-dark .doctorlogs-page .btn-group .btn.active {
+  color: #D2E0FB !important;
+  border-bottom-color: #D2E0FB !important;
+}
+
+/* Refresh button styling */
+.doctorlogs-page .btn-secondary {
+  background: #0f3460 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.doctorlogs-page .btn-secondary:hover {
+  background: #0f3460 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(142, 172, 205, 0.3) !important;
+}
+
+.doctorlogs-page .btn-secondary:disabled {
+  background: #d1d5db !important;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.theme-dark .doctorlogs-page .btn-secondary {
+  background: #5B7A9F !important;
+}
+
+.theme-dark .doctorlogs-page .btn-secondary:hover {
+  background: #5B7A9F !important;
+}
+
+.doctorlogs-page .logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* log item - Match AppHistory .appt-item layout to preserve height */
+.doctorlogs-page .log-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.doctorlogs-page .log-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 16, 71, 0.1);
+  border-color: #8EACCD;
+}
+
+/* Profile picture section - Match AppHistory .appt-left */
+.doctorlogs-page .log-avatar-section {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.doctorlogs-page .log-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(142, 172, 205, 0.2);
+}
+
+/* Patient info section (name and date/time) - Match AppHistory .appt-center */
+.doctorlogs-page .log-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 auto;
+}
+
+.doctorlogs-page .log-patient-name {
+  font-weight: 600;
+  color: #0f3460;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctorlogs-page .log-patient-email {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.doctorlogs-page .log-datetime {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.doctorlogs-page .log-contact {
+  font-size: 13px;
+  color: #8EACCD;
+  font-weight: 500;
+}
+
+/* Status and actions section - Match AppHistory .appt-right */
+.doctorlogs-page .log-status-section {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctorlogs-page .log-status {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.doctorlogs-page .status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.doctorlogs-page .status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action buttons */
+.doctorlogs-page .log-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.doctorlogs-page .btn-primary {
+  background: #8EACCD !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.doctorlogs-page .btn-primary:hover {
+  background: #7A9ABD !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(142, 172, 205, 0.3) !important;
+}
+
+.doctorlogs-page .btn-primary:disabled {
+  background: #d1d5db !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.doctorlogs-page .btn-outline-danger {
+  background: transparent !important;
+  border: 1px solid #ef4444 !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  color: #ef4444 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.doctorlogs-page .btn-outline-danger:hover {
+  background: #ef4444 !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Empty state and card styling */
+.doctorlogs-page .card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.theme-dark .doctorlogs-page .card {
+  background: #34495E;
+  border-color: #2C3E50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #E8F1F5;
+}
+
+/* Dark theme for log items */
+.theme-dark .doctorlogs-page .log-item {
+  background: #34495E;
+  border-color: #2C3E50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .doctorlogs-page .log-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  border-color: #8EACCD;
+}
+
+.theme-dark .doctorlogs-page .log-avatar {
+  border-color: rgba(142, 172, 205, 0.3);
+}
+
+.theme-dark .doctorlogs-page .log-patient-name {
+  color: #E8F1F5;
+}
+
+.theme-dark .doctorlogs-page .log-patient-email,
+.theme-dark .doctorlogs-page .log-datetime,
+.theme-dark .doctorlogs-page .log-contact {
+  color: rgba(232, 241, 245, 0.8);
+}
+
+.theme-dark .doctorlogs-page .status-completed {
+  background: #fff;
+  color: #60a5fa;
+}
+
+.theme-dark .doctorlogs-page .status-cancelled {
+  background: #fff;
+  color: #f87171;
+}
+
+.theme-dark .doctorlogs-page .btn-primary {
+  background: #5B7A9F !important;
+}
+
+.theme-dark .doctorlogs-page .btn-primary:hover {
+  background: #6B8AAF !important;
+}
+
+.theme-dark .doctorlogs-page .btn-outline-danger {
+  border-color: #f87171 !important;
+  color: #f87171 !important;
+}
+
+.theme-dark .doctorlogs-page .btn-outline-danger:hover {
+  background: #f87171 !important;
+  color: #ffffff !important;
+}
+
+/* Notes section */
+.doctorlogs-page .log-notes {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.theme-dark .doctorlogs-page .log-notes {
+  color: rgba(232, 241, 245, 0.7);
+}
+
+/* Responsive design - Match AppHistory behavior */
+
+/* Force buttons to ALWAYS be in one row - Global override */
+.doctorlogs-header > div:last-child {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+.doctorlogs-header > div:last-child .btn-group {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+@media (max-width: 910px) {
+  /* Stack header: h1 on top (centered), controls below (centered) */
+  .doctorlogs-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .doctorlogs-header div {
+    margin-top: 10px !important;
+  }
+
+  .doctorlogs-header h1 {
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Controls row (filter buttons + refresh) centered and kept in one row */
+  .doctorlogs-header > div:last-child {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn-group {
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    margin-top: 4px !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn.btn-secondary {
+    margin-left: 0 !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Reduce font/padding to keep buttons in one row */
+  .doctorlogs-header > div:last-child .btn-group .btn,
+  .doctorlogs-header > div:last-child .btn.btn-secondary {
+    font-size: 0.85rem !important;
+    padding: 6px 10px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Further reduction for mobile screens */
+@media (max-width: 600px) {
+  .doctorlogs-header h1 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .doctorlogs-header > div:last-child {
+    gap: 3px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn-group {
+    gap: 3px !important;
+    flex-shrink: 1 !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn-group .btn {
+    padding: 4px 4px !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn.btn-secondary {
+    padding: 4px 4px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    max-width: 90px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctorlogs-header h1 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+
+  .doctorlogs-header > div:last-child {
+    gap: 0px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn-group {
+    gap: 3px !important;
+    flex-shrink: 1 !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn-group .btn {
+    font-size: 0.75rem !important;
+    padding: 4px 2px !important;
+    white-space: nowrap !important;
+    min-width: 0px !important;
+    max-width: auto !important;
+    flex-shrink: 1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .doctorlogs-header > div:last-child .btn.btn-secondary {
+    font-size: 0.7rem !important;
+    padding: 4px 3px !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    max-width: 55px !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}

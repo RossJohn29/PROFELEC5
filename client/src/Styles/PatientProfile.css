@@ -1,0 +1,477 @@
+.patientdetails-dashboard-main {
+  padding-left: 80px !important;
+}
+
+.patientdetails-dashboard-main h2 {
+  margin-top: 20px !important;
+}
+
+
+.theme-dark .patientdetails-dashboard-main h2 {
+  color: #D2E0FB !important;
+}
+
+.patient-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.profile-box {
+  background: linear-gradient(135deg, #ffffff 0%, #F5F8FA 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(142, 172, 205, 0.12);
+  padding: 28px 32px;
+  overflow: hidden;
+  border: 1px solid rgba(142, 172, 205, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profile-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8EACCD 0%, #D2E0FB 100%);
+}
+
+.profile-box:hover {
+  box-shadow: 0 8px 32px rgba(142, 172, 205, 0.18);
+  transform: translateY(-2px);
+}
+
+.profile-box h3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0px;
+  color: #0f3460;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.3px;
+}
+
+.profile-info-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.profile-image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #E8F1F5 0%, #D2E0FB 100%);
+  border: 4px solid white;
+  box-shadow: 0 8px 24px rgba(142, 172, 205, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(142, 172, 205, 0.3);
+}
+
+.profile-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.profile-buttons .btn {
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 10px 16px;
+  margin: 0;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 12px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(240px, 2fr);
+  row-gap: 16px;
+  column-gap: 28px;
+  align-items: start;
+  flex: 1;
+}
+
+.info-grid .label {
+  font-weight: 600;
+  text-align: left;
+  color: #6B8FA3;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-grid .value {
+  text-align: left;
+  color: #334443;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(142, 172, 205, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #8EACCD;
+}
+
+.hmo-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hmo-left {
+  flex: 1 1 24px;
+}
+
+.hmo-right {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hmo-number {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0f3460;
+  padding: 12px 16px;
+  background: rgba(142, 172, 205, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #8EACCD;
+}
+
+.hmo-card-img {
+  width: 280px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(142, 172, 205, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.hmo-card-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hmo-card-placeholder {
+  width: 280px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #F5F8FA 0%, #E8F1F5 100%);
+  border: 2px dashed rgba(142, 172, 205, 0.4);
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.medical-history {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: #374151;
+  min-height: 60px;
+  padding: 16px;
+  background: rgba(142, 172, 205, 0.05);
+  border-radius: 10px;
+  border-left: 4px solid #8EACCD;
+  font-size: 0.95rem;
+}
+
+.theme-dark .profile-box {
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(142, 172, 205, 0.3);
+}
+
+.theme-dark .profile-box:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .profile-box h3 {
+  color: #D2E0FB;
+}
+
+.theme-dark .profile-img {
+  border-color: #8EACCD;
+  background: linear-gradient(135deg, #34495E 0%, #2C3E50 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .profile-hero {
+  background: transparent;
+}
+
+.theme-dark .info-grid .label {
+  color: #8EACCD;
+}
+
+.theme-dark .info-grid .value {
+  color: #E8F1F5;
+  background: rgba(142, 172, 205, 0.1);
+  border-left-color: #8EACCD;
+}
+
+.theme-dark .hmo-number {
+  color: #D2E0FB;
+  background: rgba(142, 172, 205, 0.15);
+  border-left-color: #8EACCD;
+}
+
+.theme-dark .hmo-card-img {
+  border-color: rgba(142, 172, 205, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .hmo-card-placeholder {
+  background: linear-gradient(135deg, #34495E 0%, #2C3E50 100%);
+  border-color: rgba(142, 172, 205, 0.4);
+  color: #9CA3AF;
+}
+
+.theme-dark .medical-history {
+  color: #E8F1F5;
+  background: rgba(142, 172, 205, 0.1);
+  border-left-color: #8EACCD;
+}
+
+@media (max-width: 760px) {
+  .patientdetails-dashboard-main {
+    padding-left: 0px !important;
+  }
+
+  .patientdetails-dashboard-main h2 {
+    margin-top: 20px !important;
+    margin-left: 0px !important;
+
+  }
+
+  .patient-profile-container {
+    max-width: 100%;
+    margin: 14px auto;
+    padding: 0 12px;
+    gap: 20px;
+  }
+
+  .profile-box {
+    padding: 20px 16px;
+  }
+
+  .profile-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .profile-info-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile-image-box {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hmo-card-img,
+  .hmo-card-placeholder {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 16/10;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    column-gap: 0;
+    width: 100%;
+  }
+
+  .info-grid .label {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+  }
+
+  .info-grid .value {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hmo-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .hmo-left {
+    width: 100%;
+  }
+
+  .hmo-right {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+  }
+
+  .hmo-number {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .medical-history {
+    font-size: 0.9rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-profile-container {
+    margin: 10px auto;
+    padding: 0 10px;
+    gap: 16px;
+  }
+
+  .profile-box {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .profile-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+  }
+
+  .profile-image-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
+  }
+
+  .hmo-card-img,
+  .hmo-card-placeholder {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    width: 100%;
+  }
+
+  .info-grid .label {
+    font-size: 0.8rem;
+  }
+
+  .info-grid .value {
+    font-size: 0.88rem;
+    padding: 9px 11px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hmo-number {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .medical-history {
+    font-size: 0.88rem;
+    padding: 12px;
+    min-height: 50px;
+  }
+
+  .profile-buttons .btn {
+    font-size: 0.82rem;
+    padding: 9px 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .patient-profile-container {
+    padding: 0 8px;
+    gap: 14px;
+  }
+
+  .profile-box {
+    padding: 16px 12px;
+  }
+
+  .profile-box h3 {
+    font-size: 1rem;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .info-grid {
+    width: 100%;
+  }
+
+  .info-grid .label {
+    font-size: 0.78rem;
+  }
+
+  .info-grid .value {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+

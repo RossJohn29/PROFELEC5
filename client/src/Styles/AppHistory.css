@@ -1,0 +1,458 @@
+.apphistory-page {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+.theme-dark .apphistory-page {
+  background: #2C3E50;
+}
+
+.apphistory-dashboard-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.apphistory-dashboard-main div {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+.apphistory-dashboard-main div div {
+  margin-bottom: 0px !important;
+}
+
+.apphistory-page .apphistory-dashboard-main h1 {
+  color: #0f3460;
+  font-size: 32px;
+  margin-bottom: 0 !important;
+}
+
+.theme-dark .apphistory-page .apphistory-dashboard-main h1 {
+  color: #eef0f3;
+  font-size: 32px;
+  margin-bottom: 0 !important;
+}
+
+.theme-dark .apphistory-page .apphistory-dashboard-main h1 {
+  color: #D2E0FB !important;
+}
+
+.apphistory-dashboard-main .card {
+  margin-top: 16px;
+  margin-bottom: 16px !important;
+}
+
+/* Center the page content */
+.apphistory-page .ph-container {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
+/* Center the tabs row */
+.apphistory-page .nav-tabs {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Calendar overrides */
+.apphistory-page .ph-calendar,
+.apphistory-page .calendar-section {
+  max-width: none !important;
+  width: 100% !important;
+  position: static !important;
+  top: auto !important;
+  margin-top: 0 !important;
+  background: #ffffff !important;
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  padding: 1.25rem !important;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.apphistory-page .calendar-section:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 28px rgba(142, 172, 205, 0.12) !important;
+  border-color: #8EACCD !important;
+}
+
+.apphistory-page .react-calendar {
+  width: 100% !important;
+}
+
+.apphistory-page .appointment-card .status {
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+.apphistory-page .row.justify-content-center {
+  justify-content: center !important;
+}
+
+/* Dark theme for AppHistory */
+.theme-dark .apphistory-page .calendar-section,
+.theme-dark .apphistory-page .ph-calendar {
+  background: #2C3E50 !important;
+  border-color: #334155 !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.35) !important;
+}
+.theme-dark .apphistory-page .appointment-card .status {
+  color: #E8F1F5 !important;
+}
+
+/* Filter buttons styling */
+.apphistory-page .btn-group .btn {
+  align-items: center !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  background: transparent !important;
+  color: #6b7280 !important;
+  border-radius: 0 !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+}
+
+.apphistory-page .btn-group .btn:hover {
+  background: transparent !important;
+  color: #0f3460 !important;
+  border-bottom-color: #8EACCD !important;
+  transform: none !important;
+}
+
+.apphistory-page .btn-group .btn.active {
+  background: transparent !important;
+  color: #0f3460 !important;
+  border-bottom-color: #0f3460 !important;
+  font-weight: 600 !important;
+}
+
+/* Dark theme for filter buttons */
+.theme-dark .apphistory-page .btn-group .btn {
+  color: #9ca3af !important;
+}
+
+.theme-dark .apphistory-page .btn-group .btn:hover {
+  color: #D2E0FB !important;
+  border-bottom-color: #8EACCD !important;
+}
+
+.theme-dark .apphistory-page .btn-group .btn.active {
+  color: #D2E0FB !important;
+  border-bottom-color: #D2E0FB !important;
+}
+
+/* Refresh button styling */
+.apphistory-page .btn-secondary {
+  background: #0f3460 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.apphistory-page .btn-secondary:hover {
+  background: #0f3460 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 52, 96, 0.3) !important;
+}
+
+.apphistory-page .btn-secondary:disabled {
+  background: #0f3460 !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.theme-dark .apphistory-page .btn-secondary {
+  background: #5B7A9F !important;
+}
+
+.theme-dark .apphistory-page .btn-secondary:hover {
+  background: #5B7A9F !important;
+}
+
+.theme-dark .apphistory-page .btn-secondary:disabled {
+  background: #5B7A9F !important;
+}
+
+/* Responsive */
+@media (max-width: 910px) {
+  .apphistory-dashboard-main > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child h1 {
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; 
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group {
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn.btn-secondary {
+    margin-left: 0 !important;
+    padding: 6px 10px !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group .btn,
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn.btn-secondary {
+    font-size: 0.85rem !important;
+    padding: 6px 10px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Force buttons to ALWAYS be in one row - Global override */
+.apphistory-dashboard-main > div:first-child > div:last-child {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+.apphistory-dashboard-main > div:first-child > div:last-child .btn-group {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Further reduction for mobile screens */
+@media (max-width: 600px) {
+  .apphistory-dashboard-main > div:first-child h1 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child {
+    gap: 3px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group {
+    gap: 3px !important;
+    flex-shrink: 1 !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group .btn {
+    padding: 4px 4px !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn.btn-secondary {
+    padding: 4px 4px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    max-width: 90px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .apphistory-dashboard-main > div:first-child h1 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child {
+    gap: 2px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group {
+    gap: 1px !important;
+    flex-shrink: 1 !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn-group .btn {
+    font-size: 0.75rem !important;
+    padding: 4px 2px !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    max-width: 90px !important;
+    flex-shrink: 1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .apphistory-dashboard-main > div:first-child > div:last-child .btn.btn-secondary {
+    font-size: 0.7rem !important;
+    padding: 4px 3px !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    max-width: 55px !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
+/* Appointment list styling */
+.apphistory-page .appointments-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px !important;
+  gap: 12px;
+}
+
+.apphistory-page .appt-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.apphistory-page .appt-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 16, 71, 0.1);
+  border-color: #8EACCD;
+}
+
+.apphistory-page .appt-left {
+  margin-right: 16px;
+}
+
+.apphistory-page .appt-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(142, 172, 205, 0.2);
+}
+
+.apphistory-page .appt-center {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 auto;
+}
+
+.apphistory-page .doctor-name {
+  font-weight: 600;
+  color: #0f3460;
+  font-size: 18px;
+  margin: 0;
+}
+
+.apphistory-page .appt-datetime {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 0 !important;
+}
+
+.apphistory-page .appt-right {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0px !important;
+}
+
+.apphistory-page .appt-status {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.apphistory-page .status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.apphistory-page .status-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.apphistory-page .status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.apphistory-page .status-cancelled,
+.apphistory-page .status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.apphistory-page .delete-btn {
+  padding: 6px 10px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+}
+
+/* Dark theme for appointment list */
+.theme-dark .apphistory-page .appt-item {
+  background: #34495E;
+  border-color: #2C3E50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .apphistory-page .appt-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  border-color: #8EACCD;
+}
+
+.theme-dark .apphistory-page .appt-avatar {
+  border-color: rgba(142, 172, 205, 0.3);
+}
+
+.theme-dark .apphistory-page .doctor-name {
+  color: #E8F1F5;
+}
+
+.theme-dark .apphistory-page .appt-datetime {
+  color: rgba(232, 241, 245, 0.8);
+}
+
+.theme-dark .apphistory-page .status-pending {
+  background: #fff;
+  color: #fbbf24;
+}
+
+.theme-dark .apphistory-page .status-approved {
+  background: #fff;
+  color: #1f7a3a;
+}
+
+.theme-dark .apphistory-page .status-completed {
+  background: #fff;
+  color: #60a5fa;
+}
+
+.theme-dark .apphistory-page .status-cancelled,
+.theme-dark .apphistory-page .status-rejected {
+  background: #fff;
+  color: #f87171;
+}
