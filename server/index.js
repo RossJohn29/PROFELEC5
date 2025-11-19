@@ -19,27 +19,6 @@ const app = express();
 app.use(express.json({ limit: "10mb" }));
 app.use(cors());
 
-app.use(cors());
-app.use(express.json());
-
-
-app.use('/api/patients', require('./routes/patients'));
-app.use('/api/psychiatrists', require('./routes/psychiatrists'));
-app.use('/api/appointments', require('./routes/appointments'));
-app.use('/api/availability', require('./routes/availability'));
-app.use('/api/licenses', require('./routes/licenses'));
-app.use('/api/notifications', require('./routes/notifications'));
-app.use('/api/announcements', require('./routes/announcements'));
-app.use('/api/announcement-receipts', require('./routes/announcementReceipts'));
-
-// Serve static files from React build
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-// Catch-all handler: send back React's index.html for any other requests
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
-
 // Database URI (prefer env on Render/Prod)
 const MONGO_URI =
   process.env.MONGODB_URI ||
